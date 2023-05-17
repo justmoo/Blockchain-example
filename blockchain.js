@@ -10,17 +10,17 @@ export class Blockchain {
         }
     }
     // the add function 
-    addBlock() {
-        // get the hash of the previous block
+    addBlock(data) {
         const previousBlock = this.blockchain[this.blockchain.length - 1]
-        // get the data 
-        // create an instance of a block
-        // use the previous block data as input
-        // add the new block to the blockchain 
+        const newBlock = new Block("hash", previousBlock.hash, 0, data);
+        this.blockchain.push(newBlock)
+        return newBlock;
     }
 
     // print the blockchain
     print() {
         console.log(this.blockchain)
     }
+
+    // mine
 }
