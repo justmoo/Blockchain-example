@@ -1,0 +1,15 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  "start": "node index.js"
+  },
+  "author": "Mohammed aljasser",
+  "license": "ISC",
+  "dependencies": {
+    "hash.js": "^1.1.7"
+  }
+}
