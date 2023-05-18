@@ -6,6 +6,8 @@ const blockchain = new Blockchain();
 for (let i = 1; i < 10; i++) {
     blockchain.addBlock("block " + i)
 }
-console.log(blockchain.validateBlock(blockchain.blockchain[1]))
 
+// blockchain.invalidateBlock()
+
+console.log(blockchain.validateBlockchain())
 // blockchain.print()

@@ -52,4 +52,26 @@ export class Blockchain {
         }
     }
 
+    validateBlockchain() {
+        if (this.blockchain.length == 1) {
+            return true;
+        }
+        for (let i = 1; i < this.blockchain.length; i++) {
+            if (this.blockchain[i].previousHash != this.blockchain[i - 1].hash) {
+                return false
+            }
+            if (!this.validateBlock(this.blockchain[i])) {
+                return false
+            }
+        }
+        return true
+
+    }
+
+    invalidateBlock() {
+        const randomIndex = Math.floor(Math.random() * 8);
+        console.log(randomIndex)
+        this.blockchain[randomIndex].data = "Hacked"
+    }
+
 }
